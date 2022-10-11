@@ -12,3 +12,10 @@ body {
     border: 1px solid green;
     align-items: center;
 }
+.playO {
+    background-color: black;
+}
+.restart {
+    display: flex;
+    align-items: flex-end;
+}
