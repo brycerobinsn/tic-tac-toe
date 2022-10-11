@@ -14,8 +14,15 @@ body {
 }
 .playO {
     background-color: black;
+    color: white;
+    font-size: 90px;
+}
+.playX {
+    background-color: white;
+    color: red;
+    font-size: 90px;
 }
 .restart {
     display: flex;
-    align-items: flex-end;
+    
 }
