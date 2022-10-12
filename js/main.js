@@ -5,7 +5,7 @@ const chooseText = document.getElementById('choice')
 const tileValue = []
 // player object
 const player = {
-    currentChoice: 'player1'
+    currentChoice: 'playerX'
 }
 
 const winningCombinations = [
@@ -29,18 +29,18 @@ const colors = {
 // player move
 const tileSelect = function (event) {
     // check current player and picked square
-    if (player.currentChoice == 'player0' && !event.target.classList.contains('noPlay')) {
+    if (player.currentChoice == 'playerO' && !event.target.classList.contains('noPlay')) {
         event.target.classList.add('playO','noPlay')
         event.target.classList.add('noPlay')
         event.target.innerText = 'O'
         //switch player
-        player.currentChoice = 'player1'
+        player.currentChoice = 'playerX'
         chooseText.innerHTML = `X has the board!`
         //else if to not allow player to choose already picked square
     } else if (!event.target.classList.contains('noPlay')){
         event.target.classList.add('playX','noPlay')
         event.target.innerText = 'X'
-        player.currentChoice = 'player0'
+        player.currentChoice = 'playerO'
         chooseText.innerHTML = `O has the board!`
     }
 }
@@ -50,6 +50,8 @@ const restartPlay = function () {
     tiles.forEach(function(tile){
         tile.classList.remove('playO','playX','noPlay')
         tile.innerText = ''
+        player.currentChoice = 'playerX'
+        chooseText.innerHTML = 'X has the board!'
     })
 }
 
