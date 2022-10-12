@@ -1,9 +1,9 @@
 Minimum Requirements:
-- Display an empty tic-tac-toe board when the page is initially displayed.
-- A player can click on the nine cells to make a move.
-- Every click will alternate between marking an X and O.
-- Once occupied with an X or O, the cell cannot be played again.
-- Provide a Reset Game button that will clear the contents of the board.
+<!-- - Display an empty tic-tac-toe board when the page is initially displayed. -->
+<!-- - A player can click on the nine cells to make a move. -->
+<!-- - Every click will alternate between marking an X and O. -->
+<!-- - Once occupied with an X or O, the cell cannot be played again. -->
+<!-- - Provide a Reset Game button that will clear the contents of the board. -->
 
 1) Define required constants:
 	1.1) Define a colors object with keys of 'null' (when the square is empty), and players 1 & -1. The value assigned to each key represents the color to display for an empty square (null), player 1 and player -1.

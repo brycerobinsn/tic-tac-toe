@@ -29,15 +29,16 @@ const colors = {
 // player move
 const tileSelect = function (event) {
     // check current player and picked square
-    if (player.currentChoice == 'player0' && !event.target.classList.contains('playX')) {
-        event.target.classList.add('playO')
+    if (player.currentChoice == 'player0' && !event.target.classList.contains('noPlay')) {
+        event.target.classList.add('playO','noPlay')
+        event.target.classList.add('noPlay')
         event.target.innerText = 'O'
         //switch player
         player.currentChoice = 'player1'
         chooseText.innerHTML = `X has the board!`
         //else if to not allow player to choose already picked square
-    } else if (!event.target.classList.contains('playO')){
-        event.target.classList.add('playX')
+    } else if (!event.target.classList.contains('noPlay')){
+        event.target.classList.add('playX','noPlay')
         event.target.innerText = 'X'
         player.currentChoice = 'player0'
         chooseText.innerHTML = `O has the board!`
@@ -47,8 +48,7 @@ const tileSelect = function (event) {
 // restart on button click
 const restartPlay = function () {
     tiles.forEach(function(tile){
-        tile.classList.remove('playO')
-        tile.classList.remove('playX')
+        tile.classList.remove('playO','playX','noPlay')
         tile.innerText = ''
     })
 }
